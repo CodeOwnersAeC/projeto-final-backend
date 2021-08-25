@@ -55,8 +55,8 @@ namespace projetoGamaAcademy.Controllers
         }
 
         [HttpPost]
-        [Route("/candidatos/{id}/cadastrarVaga/")]
-        public async Task<IActionResult> Update(int idUser, int idVaga)
+        [Route("/candidatos/{idUser}/cadastrarVaga/{idVaga}")]
+        public async Task<IActionResult> Create(int idUser, int idVaga)
         {
             var candidato = await _context.Candidatos.FindAsync(idUser);
             candidato.IdVaga = idVaga;
@@ -70,7 +70,7 @@ namespace projetoGamaAcademy.Controllers
         public async Task<IActionResult> OnPostUploadAsync(int id, List<IFormFile> files)
         {
             long size = files.Sum(f => f.Length);
-
+            Console.WriteLine("UpLoad");
             foreach (var formFile in files)
             {
                 if (formFile.Length > 0)

@@ -51,6 +51,10 @@ namespace projetoGamaAcademy.Migrations
                         .HasColumnType("varchar(14)")
                         .HasColumnName("cpf");
 
+                    b.Property<string>("Curriculo")
+                        .HasColumnType("varchar")
+                        .HasColumnName("curriculo");
+
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2")
                         .HasColumnName("data_nascimento");
@@ -139,11 +143,11 @@ namespace projetoGamaAcademy.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("cidade");
 
-                    b.Property<string>("Cpnj")
+                    b.Property<string>("Cnpj")
                         .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("varchar(15)")
-                        .HasColumnName("cpnj");
+                        .HasColumnName("cnpj");
 
                     b.Property<string>("Email")
                         .IsRequired()

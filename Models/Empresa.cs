@@ -19,10 +19,10 @@ namespace projetoGamaAcademy.Models
         [Required]
         public string Nome { get; set; }
 
-        [Column("cpnj", TypeName = "varchar")]
+        [Column("cnpj", TypeName = "varchar")]
         [MaxLength(15)]
         [Required]
-        public string Cpnj { get; set; }
+        public string Cnpj { get; set; }
 
 
         [Column("cep", TypeName = "varchar")]

@@ -66,7 +66,7 @@ namespace projetoGamaAcademy.Controllers
         [Route("/empresas")]
         public async Task<IActionResult> Edit(Empresa empresa)
         {
-            var jaExiste = (await _context.Empresas.Where(v => v.Cpnj == empresa.Cpnj).CountAsync()) > 0;
+            var jaExiste = (await _context.Empresas.Where(v => v.Cnpj == empresa.Cnpj).CountAsync()) > 0;
 
             if (jaExiste)
             {
