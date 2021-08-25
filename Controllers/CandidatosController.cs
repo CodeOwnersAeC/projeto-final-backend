@@ -55,10 +55,10 @@ namespace projetoGamaAcademy.Controllers
         }
 
         [HttpPost]
-        [Route("/candidatos/{id}/cadastrarVaga/{idVaga}")]
-        public async Task<IActionResult> OnPostUploadAsync(int id, int idVaga)
+        [Route("/candidatos/{id}/cadastrarVaga/")]
+        public async Task<IActionResult> Update(int idUser, int idVaga)
         {
-            var candidato = await _context.Candidatos.FindAsync(id);
+            var candidato = await _context.Candidatos.FindAsync(idUser);
             candidato.IdVaga = idVaga;
             _context.SaveChanges();
 
