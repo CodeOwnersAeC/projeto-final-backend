@@ -90,6 +90,10 @@ namespace projetoGamaAcademy.Models
         [Required]
         public int IdVaga { get; set; }
 
+        [Column("curriculo", TypeName = "varchar")]
+        [Required]
+        public string Curriculo { get; set; }
+
         
         // public virtual ICollection<File> Files { get; set; }
         

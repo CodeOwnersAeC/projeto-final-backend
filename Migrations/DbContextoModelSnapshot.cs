@@ -57,8 +57,8 @@ namespace projetoGamaAcademy.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
                         .HasColumnName("email");
 
                     b.Property<string>("Estado")
